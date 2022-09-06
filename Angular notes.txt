@@ -1,0 +1,115 @@
+19.08.22:
+---------
+
+For installing angular cli into local env:
+
+npm install -g @angular/cli
+
+To verify whether angular is installed or not
+
+ng version (ng - angular)
+
+Framework: Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. 
+As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner.
+
+Components - Custom html tags/element. (html, css, ts)
+
+Services - Used to share info across multiple Components.
+
+Directives - Used to create custom attributes. (<img src="") => src - attribute
+
+Pipes - Used to manipulate info, which is present in the component.
+
+Architecture:
+For communicating from component(ts) to template(html), we will take the help of Property binding and vice versa can be done with the help of Event binding.
+
+For creating scaffolded ng app:
+
+ng new project-name.
+
+For running angular app:
+npm start/ng serve --open
+
+22.08
+---------------------------------------------
+
+Folder Structure:
+
+node_modules: It consists of all the npm packages which are used by our app.
+
+.browserslistrc - Used to keep track of all the supported browsers.
+
+.editorconfig - Used to keep track of configuration for our files in editor.
+
+.gitignore - Used to mention all the files, which need to ignored while storing the source code in git (cloud).
+
+angular.json - It consist of configuration for angular cli, to run the whole app.
+
+package-lock.json: To keep track of packages (dependencies) which are used by our packages.
+
+package.json: To keep track of our app used packages.
+
+readme.md - for writing the setup notes for our app.
+
+tsconfig.app.json/tsconfig.json/tsconfig.spec.json - Whole TypeScript configuration used by our app.
+
+23.08
+------------------------------
+
+src - source (source of ng app where we are going to work.)
+
+    app -> App Component created by default.
+
+        app.component.css (For applying styling)
+
+        app.component.html (For writing tags to display content)
+
+        app.component.ts (For writing logics)
+
+        app.module.ts (Default module given by angular)
+
+assets: Used to store images/videos/assets required for our project.
+
+environments:
+
+    environment.prod.ts - To include all the configuration related to production env.
+
+    environment.ts - To include all the configuration related to development env.
+
+favicon.ico - Icon used to attach to web page.
+
+index.html - Main file to run the app. (SPA - Single Page Application)
+
+main.ts - Main file to run the app (ts)
+
+polyfills.ts - Given by ng into order to support all the features in different browsers.
+
+styles.css - Main (Global) file for css.
+
+In module file:
+
+    @NgModule({
+        declarations: []
+        imports: []
+        providers: []
+        bootstrap: []
+    })
+
+    declarations - Used to include all the Components required for this module.
+
+    imports - used to include third party modules required for this module.
+
+    providers - Used to include services required for this module.
+
+    bootstrap - To include default component of a module.
+
+
+    @Component({
+        selector: '' #To define tag name
+        templateUrl: '' #To link html file
+        styleUrls: [] #To link css files
+    })
+
+
+
+
